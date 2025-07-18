@@ -1,9 +1,0 @@
-; freserve.def : Declares the module parameters.
-
-LIBRARY      FRESERVE.DLL
-
-EXPORTS
-	DllCanUnloadNow     PRIVATE
-	DllGetClassObject   PRIVATE
-	DllRegisterServer   PRIVATE
-	DllUnregisterServer	PRIVATE

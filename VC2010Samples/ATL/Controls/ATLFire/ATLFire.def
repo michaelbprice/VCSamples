@@ -1,9 +1,0 @@
-; ATLFire.def : Declares the module parameters.
-
-LIBRARY      "ATLFire.DLL"
-
-EXPORTS
-	DllCanUnloadNow      PRIVATE
-	DllGetClassObject    PRIVATE
-	DllRegisterServer    PRIVATE
-	DllUnregisterServer	 PRIVATE

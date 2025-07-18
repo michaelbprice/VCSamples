@@ -1,9 +1,0 @@
-
-LIBRARY      stlcollPS
-
-EXPORTS
-	DllGetClassObject       PRIVATE
-	DllCanUnloadNow         PRIVATE
-	GetProxyDllInfo         
-	DllRegisterServer		PRIVATE
-	DllUnregisterServer		PRIVATE
