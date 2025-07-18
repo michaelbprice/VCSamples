@@ -1,9 +1,0 @@
-; ATLCollections.def : Declares the module parameters.
-
-LIBRARY      "ATLCollections.DLL"
-
-EXPORTS
-	DllCanUnloadNow     PRIVATE
-	DllGetClassObject   PRIVATE
-	DllRegisterServer   PRIVATE
-	DllUnregisterServer	PRIVATE

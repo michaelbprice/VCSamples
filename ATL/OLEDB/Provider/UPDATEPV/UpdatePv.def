@@ -1,9 +1,0 @@
-; UpdatePv.def : Declares the module parameters.
-
-LIBRARY      "UpdatePv.DLL"
-
-EXPORTS
-	DllCanUnloadNow     PRIVATE
-	DllGetClassObject   PRIVATE
-	DllRegisterServer   PRIVATE
-	DllUnregisterServer	PRIVATE
