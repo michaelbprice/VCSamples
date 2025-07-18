@@ -157,7 +157,7 @@ FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
     LTEXT           "Docktool Version 1.0",IDC_STATIC,40,10,119,8
-    LTEXT           "© 1994 - 2001 Microsoft Corporation.  All rights reserved.",
+    LTEXT           "© 1994 - 2008 Microsoft Corporation.  All rights reserved.",
                     IDC_STATIC,40,25,121,20
     DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
 END

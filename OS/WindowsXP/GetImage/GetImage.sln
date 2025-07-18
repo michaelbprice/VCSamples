@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetImage", "GetImage.vcproj", "{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetImage", "GetImage.vcxproj", "{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Debug|Itanium.Build.0 = Debug|Itanium
 		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Debug|Win32.Build.0 = Debug|Win32
-		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Debug|x64.ActiveCfg = Debug|x64
-		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Debug|x64.Build.0 = Debug|x64
+		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Debug|x64.ActiveCfg = Debug|X64
+		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Debug|x64.Build.0 = Debug|X64
 		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|Itanium.ActiveCfg = Release|Itanium
 		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|Itanium.Build.0 = Release|Itanium
 		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|Win32.ActiveCfg = Release|Win32
 		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|Win32.Build.0 = Release|Win32
-		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|x64.ActiveCfg = Release|x64
-		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|x64.Build.0 = Release|x64
+		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|x64.ActiveCfg = Release|X64
+		{B43BB8DC-84F0-4D28-A5D4-29D7FF46968F}.Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,0 @@
-﻿<Plugins>
-   <Plugin Assembly="VBShapes.dll"/>
-   <Plugin Assembly="CSPenColor.dll"/>
-</Plugins>

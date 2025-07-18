@@ -9,9 +9,6 @@
 // See these sources for detailed information regarding the
 // Microsoft C++ Libraries products.
 
-#ifndef _WIN32_WINNT
-#define _WIN32_WINNT 0x0400
-#endif
 #define _ATL_FREE_THREADED
 
 #pragma warning(disable : 4100)

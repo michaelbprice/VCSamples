@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polygon", "Polygon.vcproj", "{32CA0B71-E74C-497D-9B48-2F62BDD9508D}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polygon", "Polygon.vcxproj", "{32CA0B71-E74C-497D-9B48-2F62BDD9508D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,8 +31,8 @@ Global
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Debug|Itanium.Build.0 = Debug|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Debug|Win32.ActiveCfg = Release|Win32
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Debug|Win32.Build.0 = Release|Win32
-		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Debug|x64.ActiveCfg = Debug|x64
-		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Debug|x64.Build.0 = Debug|x64
+		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Debug|x64.ActiveCfg = Debug|X64
+		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Debug|x64.Build.0 = Debug|X64
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release MinDependency|Itanium.ActiveCfg = Release|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release MinDependency|Itanium.Build.0 = Release|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release MinDependency|Win32.ActiveCfg = Release|Win32
@@ -47,14 +47,14 @@ Global
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release|Itanium.Build.0 = Release|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release|Win32.ActiveCfg = Release|Win32
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release|Win32.Build.0 = Release|Win32
-		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release|x64.ActiveCfg = Release|x64
-		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release|x64.Build.0 = Release|x64
+		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release|x64.ActiveCfg = Release|X64
+		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Release|x64.Build.0 = Release|X64
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|Itanium.ActiveCfg = Debug|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|Itanium.Build.0 = Debug|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|Win32.ActiveCfg = Release|Win32
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|Win32.Build.0 = Release|Win32
-		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|x64.ActiveCfg = Debug|x64
-		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|x64.Build.0 = Debug|x64
+		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|x64.ActiveCfg = Debug|X64
+		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Debug|x64.Build.0 = Debug|X64
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Release MinDependency|Itanium.ActiveCfg = Release|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Release MinDependency|Itanium.Build.0 = Release|Itanium
 		{32CA0B71-E74C-497D-9B48-2F62BDD9508D}.Unicode Release MinDependency|Win32.ActiveCfg = Release|Win32

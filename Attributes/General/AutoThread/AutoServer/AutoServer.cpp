@@ -71,7 +71,7 @@ void CAppExeModule::MonitorShutdown()
 			
         if (!bActivity && _pAtlModule->m_nLockCnt == 0) // if no activity let's really bail
         {
-#if _WIN32_WINNT >= 0x0400 & defined(_ATL_FREE_THREADED)
+#if defined(_ATL_FREE_THREADED)
             CoSuspendClassObjects();
             if (!bActivity && _pAtlModule->m_nLockCnt == 0)
 #endif
@@ -107,4 +107,3 @@ LPCTSTR FindOneOf(LPCTSTR p1, LPCTSTR p2)
     }
     return NULL;
 }
-

@@ -24,14 +24,10 @@ class CPropDlg;
 class ATL_NO_VTABLE CFireTabCtrl :
 	public CComObjectRootEx<CComSingleThreadModel>,
 	public CComCoClass<CFireTabCtrl, &CLSID_FireTabCtrl>,
-	public CComControl<CFireTabCtrl>,
-	public IDispatchImpl<IFireTabCtrl, &IID_IFireTabCtrl, &LIBID_ATLFIRELib>,
-	public IProvideClassInfoImpl<&CLSID_FireTabCtrl, &LIBID_ATLFIRELib>,
-	public IPersistStreamInitImpl<CFireTabCtrl>,
-	public IPersistStorageImpl<CFireTabCtrl>,
+	public CComControl<CFireTabCtrl>,	
+	public IProvideClassInfoImpl<&CLSID_FireTabCtrl, &LIBID_ATLFIRELib>,	
 	public IPersistPropertyBagImpl<CFireTabCtrl>,
 	public IQuickActivateImpl<CFireTabCtrl>,
-	public IObjectSafetyImpl<CFireTabCtrl, INTERFACESAFE_FOR_UNTRUSTED_CALLER>,
 	public IOleControlImpl<CFireTabCtrl>,
 	public IOleObjectImpl<CFireTabCtrl>,
 	public IOleInPlaceActiveObjectImpl<CFireTabCtrl>,
@@ -39,9 +35,9 @@ class ATL_NO_VTABLE CFireTabCtrl :
 	public IOleInPlaceObjectWindowlessImpl<CFireTabCtrl>,
 	public IDataObjectImpl<CFireTabCtrl>,
 	public ISupportErrorInfo,
-	public ISpecifyPropertyPagesImpl<CFireTabCtrl>,
 	public IConnectionPointContainerImpl<CFireTabCtrl>,
-	public IPropertyNotifySinkCP<CFireTabCtrl>
+	public IPropertyNotifySinkCP<CFireTabCtrl>,
+	public IFireTabCtrl
 {
 public:
 
@@ -49,27 +45,22 @@ public:
 DECLARE_REGISTRY_RESOURCEID(IDR_FIRETABCTRL)
 
 BEGIN_COM_MAP(CFireTabCtrl)
-	COM_INTERFACE_ENTRY(IFireTabCtrl)
-	COM_INTERFACE_ENTRY(IDispatch)
-	COM_INTERFACE_ENTRY_IMPL(IViewObjectEx)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IViewObject2, IViewObjectEx)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IViewObject, IViewObjectEx)
-	COM_INTERFACE_ENTRY_IMPL(IOleInPlaceObjectWindowless)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IOleInPlaceObject, IOleInPlaceObjectWindowless)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IOleWindow, IOleInPlaceObjectWindowless)
-	COM_INTERFACE_ENTRY_IMPL(IOleInPlaceActiveObject)
-	COM_INTERFACE_ENTRY_IMPL(IOleControl)
-	COM_INTERFACE_ENTRY_IMPL(IOleObject)
-	COM_INTERFACE_ENTRY_IMPL(IQuickActivate)
-	COM_INTERFACE_ENTRY(IObjectSafety)
-	COM_INTERFACE_ENTRY_IMPL(IPersistPropertyBag)
-	COM_INTERFACE_ENTRY_IMPL(IPersistStorage)
-	COM_INTERFACE_ENTRY_IMPL(IPersistStreamInit)
-	COM_INTERFACE_ENTRY2(IPersist, IPersistStreamInit)
-	COM_INTERFACE_ENTRY_IMPL(ISpecifyPropertyPages)
-	COM_INTERFACE_ENTRY_IMPL(IDataObject)
+	COM_INTERFACE_ENTRY(IFireTabCtrl)	
+	COM_INTERFACE_ENTRY(IViewObjectEx)
+	COM_INTERFACE_ENTRY2(IViewObject2, IViewObjectEx)
+	COM_INTERFACE_ENTRY2(IViewObject, IViewObjectEx)
+	COM_INTERFACE_ENTRY(IOleInPlaceObjectWindowless)
+	COM_INTERFACE_ENTRY2(IOleInPlaceObject, IOleInPlaceObjectWindowless)
+	COM_INTERFACE_ENTRY2(IOleWindow, IOleInPlaceObjectWindowless)
+	COM_INTERFACE_ENTRY(IOleInPlaceActiveObject)
+	COM_INTERFACE_ENTRY(IOleControl)
+	COM_INTERFACE_ENTRY(IOleObject)
+	COM_INTERFACE_ENTRY(IQuickActivate)
+	COM_INTERFACE_ENTRY2(IPersist, IPersistPropertyBag)
+	COM_INTERFACE_ENTRY(IPersistPropertyBag)
+	COM_INTERFACE_ENTRY(IDataObject)
 	COM_INTERFACE_ENTRY(IProvideClassInfo)
-	COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)
+	COM_INTERFACE_ENTRY(IConnectionPointContainer)
 END_COM_MAP()
 
 BEGIN_PROPERTY_MAP(CFireTabCtrl)

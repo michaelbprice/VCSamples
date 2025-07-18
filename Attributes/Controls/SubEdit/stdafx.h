@@ -14,11 +14,9 @@
 #if !defined(AFX_STDAFX_H__F46B95C5_C0DA_11D1_AB8C_000000008888__INCLUDED_)
 #define AFX_STDAFX_H__F46B95C5_C0DA_11D1_AB8C_000000008888__INCLUDED_
 
-#if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+
 #pragma warning(disable : 4681)
-#define _WIN32_DCOM
 
 #include <atlbase.h>
 #include <atlcom.h>

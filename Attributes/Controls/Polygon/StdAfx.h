@@ -12,14 +12,9 @@
 #if !defined(AFX_STDAFX_H__2885EDFB_A26B_11D1_B49B_00C04F98EFE0__INCLUDED_)
 #define AFX_STDAFX_H__2885EDFB_A26B_11D1_B49B_00C04F98EFE0__INCLUDED_
 
-#if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
 
 #define STRICT
-#ifndef _WIN32_WINNT
-#define _WIN32_WINNT 0x0400
-#endif
 #define _ATL_APARTMENT_THREADED
 
 #include <atlbase.h>

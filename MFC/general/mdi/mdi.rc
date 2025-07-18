@@ -81,7 +81,7 @@ BEGIN
     CTEXT           "Microsoft Windows",IDC_STATIC,24,5,112,8
     CTEXT           "Microsoft Foundation Classes",IDC_STATIC,31,14,105,8
     CTEXT           "MDI Sample",IDC_STATIC,24,23,112,8
-    CTEXT           "Version 9.0",IDC_STATIC,24,36,112,8
+    CTEXT           "Version 10.0",IDC_STATIC,24,36,112,8
     ICON            AFX_IDI_STD_MDIFRAME,IDC_STATIC,8,10,20,20
     DEFPUSHBUTTON   "OK",IDOK,56,56,32,14,WS_GROUP
 END

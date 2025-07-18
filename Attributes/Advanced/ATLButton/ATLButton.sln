@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlButn", "AtlButn.vcproj", "{D6056933-4149-419C-AED0-E2A38976F3DA}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlButn", "AtlButn.vcxproj", "{D6056933-4149-419C-AED0-E2A38976F3DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		{D6056933-4149-419C-AED0-E2A38976F3DA}.Debug|Itanium.Build.0 = Debug|Itanium
 		{D6056933-4149-419C-AED0-E2A38976F3DA}.Debug|Win32.ActiveCfg = Debug|Win32
 		{D6056933-4149-419C-AED0-E2A38976F3DA}.Debug|Win32.Build.0 = Debug|Win32
-		{D6056933-4149-419C-AED0-E2A38976F3DA}.Debug|x64.ActiveCfg = Debug|x64
-		{D6056933-4149-419C-AED0-E2A38976F3DA}.Debug|x64.Build.0 = Debug|x64
+		{D6056933-4149-419C-AED0-E2A38976F3DA}.Debug|x64.ActiveCfg = Debug|X64
+		{D6056933-4149-419C-AED0-E2A38976F3DA}.Debug|x64.Build.0 = Debug|X64
 		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|Itanium.ActiveCfg = Release|Itanium
 		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|Itanium.Build.0 = Release|Itanium
 		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|Win32.ActiveCfg = Release|Win32
 		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|Win32.Build.0 = Release|Win32
-		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|x64.ActiveCfg = Release|x64
-		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|x64.Build.0 = Release|x64
+		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|x64.ActiveCfg = Release|X64
+		{D6056933-4149-419C-AED0-E2A38976F3DA}.Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,6 @@
 #define STRICT
 
 #define _ATL_APARTMENT_THREADED
-#define _WIN32_DCOM 0x0400
 
 #include <atlbase.h>
 //You may derive a class from CComModule and use it if you want to override

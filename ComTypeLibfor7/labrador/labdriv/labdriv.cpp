@@ -41,7 +41,7 @@ void _cdecl CallLabrador()
 
 	Trace(_T("Calling through IMammal methods...\n"));
 	pMammal->GetSpeciesName(szTmp);
-	Trace(_T("Species name is <%ls>\n"), szTmp);
+	Trace(_T("Species name is <%s>\n"), szTmp);
 	LONG bIsAlive;
 	pMammal->IsAlive(&bIsAlive);
 	if (bIsAlive)
@@ -54,17 +54,17 @@ void _cdecl CallLabrador()
 	Trace(_T("Calling through IDog methods...\n"));
 	LONG bIsBarking;
 	pDog->GetPetName(szTmp);
-	Trace(_T("Dog's name is <%ls>\n"), szTmp);
+	Trace(_T("Dog's name is <%s>\n"), szTmp);
 
 	pDog->IsBarking(&bIsBarking);
 	if (bIsBarking)
-		printf("BARK! BARK! BARK! BARK!\n");
+		Trace(_T("BARK! BARK! BARK! BARK!\n"));
 
 	unsigned char kiva[] = "KIVA";
 	pDog->SetPetName(kiva);
 
 	pDog->GetPetName(szTmp);
-	printf("Dog's New name is <%ls>\n", szTmp);
+	Trace(_T("Dog's New name is <%s>\n"), szTmp);
 
 	Trace(_T("Releasing Object\n"));
 	pDog = NULL;

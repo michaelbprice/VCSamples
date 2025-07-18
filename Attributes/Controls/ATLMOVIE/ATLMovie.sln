@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATLMovie", "ATLMovie.vcproj", "{B0708981-42C2-4FFC-A824-D05499417ABF}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATLMovie", "ATLMovie.vcxproj", "{B0708981-42C2-4FFC-A824-D05499417ABF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		{B0708981-42C2-4FFC-A824-D05499417ABF}.Debug|Itanium.Build.0 = Debug|Itanium
 		{B0708981-42C2-4FFC-A824-D05499417ABF}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B0708981-42C2-4FFC-A824-D05499417ABF}.Debug|Win32.Build.0 = Debug|Win32
-		{B0708981-42C2-4FFC-A824-D05499417ABF}.Debug|x64.ActiveCfg = Debug|x64
-		{B0708981-42C2-4FFC-A824-D05499417ABF}.Debug|x64.Build.0 = Debug|x64
+		{B0708981-42C2-4FFC-A824-D05499417ABF}.Debug|x64.ActiveCfg = Debug|X64
+		{B0708981-42C2-4FFC-A824-D05499417ABF}.Debug|x64.Build.0 = Debug|X64
 		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|Itanium.ActiveCfg = Release|Itanium
 		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|Itanium.Build.0 = Release|Itanium
 		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|Win32.ActiveCfg = Release|Win32
 		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|Win32.Build.0 = Release|Win32
-		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|x64.ActiveCfg = Release|x64
-		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|x64.Build.0 = Release|x64
+		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|x64.ActiveCfg = Release|X64
+		{B0708981-42C2-4FFC-A824-D05499417ABF}.Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

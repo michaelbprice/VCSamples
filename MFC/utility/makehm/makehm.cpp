@@ -27,48 +27,48 @@
 static char BASED_CODE THIS_FILE[] = __FILE__;
 #endif
 
-#define SIGNON_VER 7
+#define SIGNON_VER 10
 #define SIGNON_REV 0
 
 /////////////////////////////////////////////////////////////////////////////
 
-void UsageErr(const char* szErrorMessage = NULL,
-			  const char* szErrorParam = NULL)
+void UsageErr(const TCHAR* szErrorMessage = NULL,
+			  const TCHAR* szErrorParam = NULL)
 {
-	fprintf(stderr,
-		"\nMicrosoft (R) Help Maintainence Utility   Version %d.%02d\n"
-		"Copyright (c) Microsoft Corporation.  All rights reserved.\n\n",
+	_ftprintf(stderr,
+		_T("\nMicrosoft (R) Help Maintenance Utility   Version %d.%02d\n")
+		_T("Copyright (c) Microsoft Corporation.  All rights reserved.\n\n"),
 		SIGNON_VER, SIGNON_REV);
 
 	if (szErrorMessage != NULL)
 	{
-		fprintf(stderr, "makehm: error: ");
-		fprintf(stderr, szErrorMessage, szErrorParam);
-		fprintf(stderr, ".\n\n");
+		_ftprintf(stderr, _T("makehm: error: "));
+		_ftprintf(stderr, szErrorMessage, szErrorParam);
+		_ftprintf(stderr, _T(".\n\n"));
 	}
 
-	fprintf(stderr, "makehm usage:\n\n"
-	"  makehm [/h [/a <file.h> [/I <path>]]] <from>,<to>,<add>... <resource.h> [output.hm]\n"
-	"\n"
-	"    /h     - generates an include file (.h) for HTML help instead of\n"
-	"             a normal (.hm) WinHelp map file\n"
-	"    /a     - copy the contents of the specified <file.h> file to the\n"
-	"             output.\n"
-	"    /I     - additional path to look for the file.h file.  The program will\n"
-	"             first look in the current directory, then path specified by the\n"
-	"             /I option and then in the path specified by the\n"
-	"             INCLUDE environment variable\n"
-	"\n"
-	"    <from>,<to>,<add> fields must appear as one argument and\n"
-	"       are separated by commas.  A set of these arguments may\n"
-	"       appear more than once.\n"
-	"    <from> - identifies the symbol prefix to map from (ie. ID_)\n"
-	"    <to>   - identifies the symbol prefix to map to (ie. HID_)\n"
-	"    <add>  - identifies a numeric offset to be used (ie. 0x10000)\n"
-	"\n"
-	"    <resource.h> - identifies the input header file (ie. resource.h).\n"
-	"    [output.hm] - identifies the output help map file.  If not\n"
-	"       supplied, output is written to stdout.\n");
+	_ftprintf(stderr, _T("makehm usage:\n\n")
+	_T("  makehm [/h [/a <file.h> [/I <path>]]] <from>,<to>,<add>... <resource.h> [output.hm]\n")
+	_T("\n")
+	_T("    /h     - generates an include file (.h) for HTML help instead of\n")
+	_T("             a normal (.hm) WinHelp map file.\n")
+	_T("    /a     - copies the contents of the specified <file.h> file to the\n")
+	_T("             output.\n")
+	_T("    /I     - additional path to search for the file.h file.  The program will\n")
+	_T("             first look in the current directory, then the path specified by the\n")
+	_T("             /I option and then in the path specified by the INCLUDE\n")
+	_T("             environment variable.\n")
+	_T("\n")
+	_T("    <from>,<to>,<add> fields must appear as one argument and\n")
+	_T("       are separated by commas.  A set of these arguments may\n")
+	_T("       appear more than once.\n")
+	_T("    <from> - identifies the symbol prefix to map from (e.g., ID_)\n")
+	_T("    <to>   - identifies the symbol prefix to map to (e.g., HID_)\n")
+	_T("    <add>  - identifies a numeric offset to be used (e.g., 0x10000)\n")
+	_T("\n")
+	_T("    <resource.h> - identifies the input header file (e.g., resource.h).\n")
+	_T("    [output.hm] - identifies the output help map file.  If not\n")
+	_T("       supplied, output is written to stdout.\n"));
 
 	exit(1);
 }
@@ -101,40 +101,48 @@ BOOL CLineFile::ReadLine(CString& str)
 
 void CLineFile::WriteLine(const CString& str)
 {
-	ASSERT(str[str.GetLength()-1] == '\n');
+	ASSERT(str[str.GetLength()-1] == _T('\n'));
 	WriteString(str);
 }
 
 void CLineFile::SafeOpen(const CString& name, UINT nStyleFlags)
 {
-	BOOL fSuccess = Open(name, nStyleFlags, 0);
+	BOOL fSuccess = Open(name, nStyleFlags);
 	if (!fSuccess)
-		UsageErr("unable to open file \"%s\"", name);
+		UsageErr(_T("unable to open file \"%s\""), name);
 }
 
 /////////////////////////////////////////////////////////////////////////////
 
-BOOL IsValidSymbol(const char* psz)
+BOOL IsValidSymbol(const TCHAR* psz)
 {
-	if (!__iscsymf((unsigned char)*psz))
+#ifdef UNICODE
+	if (!__iswcsymf(*psz))
+#else
+	if (!__iscsymf(*psz))
+#endif
 		return FALSE;
 
 	ASSERT(*psz != 0);
 	++psz;
 	while (*psz)
 	{
-		if (!__iscsym((unsigned char)*psz))
+#ifdef UNICODE
+		if (!__iswcsym(*psz))
+#else
+		if (!__iscsym(*psz))
+#endif
 			return FALSE;
 		++psz;
 	}
 	return TRUE;
 }
 
-#define isodigit(i) ('0' <= (i) && (i) <= '7')
+#define isodigit(i) (_T('0') <= (i) && (i) <= _T('7'))
 
-BOOL IsValidValue(const char* psz, DWORD& dwValue)
+BOOL IsValidValue(const TCHAR* psz, DWORD& dwValue)
 {
-	if (*psz == 0 || !isdigit((unsigned char)*psz))
+	if (*psz == 0 || !_istdigit(*psz))
 		return FALSE;
 
 	DWORD dw = 0;
@@ -143,10 +151,10 @@ BOOL IsValidValue(const char* psz, DWORD& dwValue)
 		if (psz[1] == 0)
 			return FALSE;
 		psz += 2;
-		while (isxdigit((unsigned char)*psz))
+		while (_istxdigit(*psz))
 		{
 			dw *= 16;
-			dw += isdigit((unsigned char)*psz) ? *psz - '0' : 10 + (*psz|0x20) - 'a';
+			dw += _istdigit(*psz) ? *psz - '0' : 10 + (*psz|0x20) - 'a';
 			++psz;
 		}
 	}
@@ -161,7 +169,7 @@ BOOL IsValidValue(const char* psz, DWORD& dwValue)
 	}
 	else
 	{
-		while (isdigit((unsigned char)*psz))
+		while (_istdigit(*psz))
 		{
 			dw *= 10;
 			dw += *psz - '0';
@@ -182,34 +190,34 @@ CPtrArray aMap;
 
 struct CMapInfo
 {
-	char* pszPrefixFrom;
-	char* pszPrefixTo;
+	TCHAR* pszPrefixFrom;
+	TCHAR* pszPrefixTo;
 	DWORD dwAddTo;
 };
 
-void AddToMap(char* pszArg)
+void AddToMap(TCHAR* pszArg)
 {
 	ENSURE(pszArg != NULL);
-	char* psz = _strdup(pszArg);
+	TCHAR* psz = _tcsdup(pszArg);
 	if (psz == NULL)
 	{
 		AfxThrowMemoryException();
 	}
-	ASSERT(strchr(psz, ',') != NULL);
+	ASSERT(_tcschr(psz, _T(',')) != NULL);
 
-	char* pszPrefixFrom;
-	char* pszPrefixTo;
-	char* pszAddTo;
+	TCHAR* pszPrefixFrom;
+	TCHAR* pszPrefixTo;
+	TCHAR* pszAddTo;
 	DWORD dwAddTo;
 	CMapInfo* pInfo;
-	char* pContext=NULL;
+	TCHAR* pContext=NULL;
 
 	// parse each field out of the argument.
-	pszPrefixFrom = strtok_s(psz, ",", &pContext);
-	pszPrefixTo = strtok_s(NULL, ",", &pContext);
+	pszPrefixFrom = _tcstok_s(psz, _T(","), &pContext);
+	pszPrefixTo = _tcstok_s(NULL, _T(","), &pContext);
 	if (pszPrefixTo == NULL)
 		goto ParmError;
-	pszAddTo = strtok_s(NULL, ",", &pContext);
+	pszAddTo = _tcstok_s(NULL, _T(","), &pContext);
 	if (pszAddTo == NULL)
 		goto ParmError;
 
@@ -229,11 +237,11 @@ void AddToMap(char* pszArg)
 	return;
 
 ParmError:
-	UsageErr("parameter \"%s\" not correctly formed.", pszArg);
+	UsageErr(_T("parameter \"%s\" not correctly formed."), pszArg);
 	ASSERT(FALSE);
 }
 
-CMapInfo* FindInMap(const char* psz)
+CMapInfo* FindInMap(const TCHAR* psz)
 {
 	ENSURE(psz != NULL);
 	ENSURE(*psz != 0);
@@ -241,8 +249,8 @@ CMapInfo* FindInMap(const char* psz)
 	for (int i = 0; i < nMax; i++)
 	{
 		CMapInfo* pInfo = (CMapInfo*)aMap.GetAt(i);
-		size_t nLen = strlen(pInfo->pszPrefixFrom);
-		if (strncmp(pInfo->pszPrefixFrom, psz, nLen) == 0)
+		size_t nLen = _tcslen(pInfo->pszPrefixFrom);
+		if (_tcsncmp(pInfo->pszPrefixFrom, psz, nLen) == 0)
 			return pInfo;
 	}
 	return NULL;
@@ -251,7 +259,7 @@ CMapInfo* FindInMap(const char* psz)
 /////////////////////////////////////////////////////////////////////////////
 
 BOOL
-MapNameValue(const char* pszName, CString& strNewName, DWORD& dwValue)
+MapNameValue(const TCHAR* pszName, CString& strNewName, DWORD& dwValue)
 {
 	CMapInfo* pInfo = FindInMap(pszName);
 	if (pInfo == NULL)
@@ -259,50 +267,50 @@ MapNameValue(const char* pszName, CString& strNewName, DWORD& dwValue)
 
 	CString strName = pszName;
 	strNewName = (CString)pInfo->pszPrefixTo +
-		strName.Right(strName.GetLength()-(int)strlen(pInfo->pszPrefixFrom));
+		strName.Right(strName.GetLength()-(int)_tcslen(pInfo->pszPrefixFrom));
 	dwValue += pInfo->dwAddTo;
 	return TRUE;
 }
 
 CString StringFromDword(DWORD dwValue)
 {
-	char buf[sizeof "0x12345678"];
-	sprintf_s(buf, sizeof "0x12345678", "0x%lX", dwValue);
+	TCHAR buf[sizeof _T("0x12345678")];
+	_stprintf_s(buf, sizeof _T("0x12345678"), _T("0x%lX"), dwValue);
 	return CString(buf);
 }
 
 BOOL MapLine(CString& strLine, BOOL fHTMLFormat )
 {
-	static char szWhiteSpace1[] = "\t ";
-	static char szWhiteSpace2[] = "\t\n ";
-	static char szDefine[] = "#define";
+	static TCHAR szWhiteSpace1[] = _T("\t ");
+	static TCHAR szWhiteSpace2[] = _T("\t\n ");
+	static TCHAR szDefine[] = _T("#define");
 
-	char* pszCopy = _strdup(strLine);
+	TCHAR* pszCopy = _tcsdup(strLine);
 	if (pszCopy == NULL)
 	{
 		AfxThrowMemoryException();
 	}
 
-	char* psz;
-	char* pszSymbol;
-	char* pszValue;
+	TCHAR* psz;
+	TCHAR* pszSymbol;
+	TCHAR* pszValue;
 	DWORD dwValue;
 	CString strNewName;
-	char* pContext=NULL;
+	TCHAR* pContext=NULL;
 
 	// '//{{NOHELP}}' can be placed on the line and it will not be included
-	if (strstr(strLine, "//{{NOHELP}}") != NULL)
+	if (_tcsstr(strLine, _T("//{{NOHELP}}")) != NULL)
 		goto RetFalse;
 
-	psz = strtok_s(pszCopy, szWhiteSpace1, &pContext);
+	psz = _tcstok_s(pszCopy, szWhiteSpace1, &pContext);
 	if (psz == NULL)
 		goto RetFalse;
-	if (strcmp(psz, szDefine) != 0)
+	if (_tcscmp(psz, szDefine) != 0)
 		goto RetFalse;
-	pszSymbol = strtok_s(NULL, szWhiteSpace1, &pContext);
+	pszSymbol = _tcstok_s(NULL, szWhiteSpace1, &pContext);
 	if (pszSymbol == NULL)
 		goto RetFalse;
-	pszValue = strtok_s(NULL, szWhiteSpace2, &pContext);
+	pszValue = _tcstok_s(NULL, szWhiteSpace2, &pContext);
 	if (pszValue == NULL)
 		goto RetFalse;
 
@@ -315,13 +323,13 @@ BOOL MapLine(CString& strLine, BOOL fHTMLFormat )
 
 	//BLOCK: format output line
 	{
-		CString strPad(' ', 40-strNewName.GetLength());
+		CString strPad(_T(' '), 40-strNewName.GetLength());
 		if (strPad.IsEmpty())
-			strPad = '\t';
+			strPad = _T('\t');
 		if( fHTMLFormat )
-			strLine = "#define " + strNewName + strPad + StringFromDword(dwValue) + "\n";
+			strLine = _T("#define ") + strNewName + strPad + StringFromDword(dwValue) + _T("\n");
 		else
-			strLine = strNewName + strPad + StringFromDword(dwValue) + "\n";
+			strLine = strNewName + strPad + StringFromDword(dwValue) + _T("\n");
 	}
 
 	ASSERT(pszCopy != NULL);
@@ -339,18 +347,18 @@ void AddPath( CStringList& strrgPathList, const CString& strIncludePath )
 	CString strPath;
 	int curPos = 0;
 
-	strPath = strIncludePath.Tokenize( ";", curPos );
+	strPath = strIncludePath.Tokenize(_T(";"), curPos );
 
 	while( ! strPath.IsEmpty() )
 	{
 		strPath.TrimLeft();
 		strPath.TrimRight();
 		strrgPathList.AddTail( strPath );
-		strPath = strIncludePath.Tokenize( ";", curPos );
+		strPath = strIncludePath.Tokenize(_T(";"), curPos );
 	}
 }
 
-BOOL FileExists( const char *pszFileName )
+BOOL FileExists( const TCHAR *pszFileName )
 {
 	BOOL r = FALSE;
 	CStdioFile file;
@@ -363,7 +371,7 @@ BOOL FileExists( const char *pszFileName )
 	return r;
 }
 
-CString FindIncludeFile( const char *pszIncludeFilename, const char *pszIncludePath )
+CString FindIncludeFile( const TCHAR *pszIncludeFilename, const TCHAR *pszIncludePath )
 {
 	CString strEnvInclude;
 	CStringList strrgPathList;
@@ -379,7 +387,7 @@ CString FindIncludeFile( const char *pszIncludeFilename, const char *pszIncludeP
 		AddPath( strrgPathList, pszIncludePath );
 	
 	// add path specified in the INCLUDE variable
-	if( strEnvInclude.GetEnvironmentVariable( "INCLUDE" ) )
+	if( strEnvInclude.GetEnvironmentVariable( _T("INCLUDE") ) )
 		AddPath( strrgPathList, strEnvInclude );
 	
 	POSITION pos = strrgPathList.GetHeadPosition();
@@ -401,7 +409,7 @@ CString FindIncludeFile( const char *pszIncludeFilename, const char *pszIncludeP
 
 /////////////////////////////////////////////////////////////////////////////
 
-int main(int argc, char** argv)
+int _tmain(int argc, TCHAR** argv)
 {
 	int iFirstParam = 1;
 
@@ -412,22 +420,22 @@ int main(int argc, char** argv)
 	BOOL fHTMLFormat = FALSE;
 
 	// <include.h> filename to be copied
-	const char *pszIncludeFilename = NULL;
+	const TCHAR *pszIncludeFilename = NULL;
 
 	// additional include path
-	const char *pszIncludePath = NULL;
+	const TCHAR *pszIncludePath = NULL;
 
-	if( argc > 1 && _stricmp(argv[1], "/h") == 0 )
+	if( argc > 1 && _tcsicmp(argv[1], _T("/h")) == 0 )
 	{
 		fHTMLFormat = TRUE;
 		iFirstParam++;
 
-		if( ( argc > 3 ) && _stricmp(argv[2], "/a") == 0 ) // copy file operation
+		if( ( argc > 3 ) && _tcsicmp(argv[2], _T("/a")) == 0 ) // copy file operation
 		{
 			pszIncludeFilename = argv[3];
 			iFirstParam += 2;
 
-			if( argc > 5 && _stricmp(argv[4], "/i" ) == 0 )
+			if( argc > 5 && _tcsicmp(argv[4], _T("/i")) == 0 )
 			{
 				pszIncludePath = argv[5];
 				iFirstParam += 2;
@@ -438,7 +446,7 @@ int main(int argc, char** argv)
 	// add symbol mappings to the map.
 	BOOL fAddedToMap = FALSE;
 	int i;
-	for (i = iFirstParam; i < argc && strchr(argv[i], ',') != NULL; i++)
+	for (i = iFirstParam; i < argc && _tcschr(argv[i], _T(',')) != NULL; i++)
 	{
 		AddToMap(argv[i]);
 		fAddedToMap = TRUE;
@@ -480,7 +488,7 @@ int main(int argc, char** argv)
 		CString strIncludeFilePath = FindIncludeFile( pszIncludeFilename, pszIncludePath );
 		if( strIncludeFilePath.IsEmpty() )
 		{
-			fprintf(stderr, "Error: Additional include file %s not found\n\n", pszIncludeFilename );
+			_ftprintf(stderr, _T("Error: Additional include file %s not found\n\n"), pszIncludeFilename );
 			fileOut.Close();
 			exit(1);
 		}

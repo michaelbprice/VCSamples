@@ -1,13 +1,13 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "labdriv", "labdriv\labdriv.vcproj", "{955399AB-BEF7-4EEA-AAF1-3C9FFC28E43A}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "labdriv", "labdriv\labdriv.vcxproj", "{955399AB-BEF7-4EEA-AAF1-3C9FFC28E43A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3A2FBFB0-58C1-4EF3-8ADD-B0B895B0A9D0} = {3A2FBFB0-58C1-4EF3-8ADD-B0B895B0A9D0}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "labrador", "labrador.vcproj", "{3A2FBFB0-58C1-4EF3-8ADD-B0B895B0A9D0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "labrador", "labrador.vcxproj", "{3A2FBFB0-58C1-4EF3-8ADD-B0B895B0A9D0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "labPS", "labPS.vcproj", "{EE87811D-7F5E-460A-BF87-E85AE98A7EF2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "labPS", "labPS.vcxproj", "{EE87811D-7F5E-460A-BF87-E85AE98A7EF2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3A2FBFB0-58C1-4EF3-8ADD-B0B895B0A9D0} = {3A2FBFB0-58C1-4EF3-8ADD-B0B895B0A9D0}
 	EndProjectSection

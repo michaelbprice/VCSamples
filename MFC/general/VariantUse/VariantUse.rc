@@ -81,7 +81,7 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
     LTEXT           "VariantUse Version 1.0",IDC_STATIC,40,10,119,8,
                     SS_NOPREFIX
-    LTEXT           "© 1998 - 2001 Microsoft Corporation.  All rights reserved.",
+    LTEXT           "© 1998 - 2008 Microsoft Corporation.  All rights reserved.",
                     IDC_STATIC,40,25,127,17
     DEFPUSHBUTTON   "OK",IDOK,182,7,50,14,WS_GROUP
 END

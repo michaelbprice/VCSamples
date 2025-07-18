@@ -80,7 +80,7 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
     LTEXT           "CmnCtrl2 Version 1.0",IDC_STATIC,40,10,119,8,
                     SS_NOPREFIX
-    LTEXT           "© 1992 - 2001 Microsoft Corporation.  All rights reserved.",
+    LTEXT           "© 1992 - 2008 Microsoft Corporation.  All rights reserved.",
                     IDC_STATIC,40,36,126,22
     DEFPUSHBUTTON   "OK",IDOK,187,7,32,14,WS_GROUP
     LTEXT           "Author: Frank Crockett",IDC_STATIC,40,23,111,8

@@ -18,6 +18,77 @@
 static char BASED_CODE THIS_FILE[] = __FILE__;
 #endif
 
+HMODULE LoadLocalizedResourceDLLUsingPath(const CString &strPath, const CString &strDLLName)
+{
+	if (strPath.IsEmpty() || strPath.IsEmpty())
+	{
+		return NULL;
+	}
+
+	// Check if given path even exists
+	if (GetFileAttributes(strPath) == 0xFFFFFFFF)
+	{
+		return NULL;
+	}
+
+	LANGID langid = GetUserDefaultUILanguage();
+	const LCID lcidUser = MAKELCID(langid, SORT_DEFAULT);
+
+	LCID rglcid[3];
+	rglcid[0] = lcidUser;
+	rglcid[1] = MAKELCID(MAKELANGID(PRIMARYLANGID(lcidUser), SUBLANG_DEFAULT), SORTIDFROMLCID(lcidUser));
+	rglcid[2] = 0x409;
+
+	CString strFullPath;
+	BOOL fFoundDLL = FALSE;
+
+	for (int i = 0; i < _countof(rglcid); i++)
+	{
+		// Check if it's the same as any LCID already checked, which is very possible
+		int n = 0;
+		for (n = 0; n < i; n++)
+		{
+			if (rglcid[n] == rglcid[i])
+				break;
+		}
+
+		if (n < i)
+		{
+			continue;
+		}
+
+		strFullPath.Format(_T("%s\\%d\\%s"), strPath, rglcid[i], strDLLName);
+
+		if (GetFileAttributes(strFullPath) != 0xFFFFFFFF)
+		{
+			fFoundDLL = TRUE;
+			break;
+		}
+	}
+
+	if (fFoundDLL)
+	{
+		// Finally, attempt to load the library
+		return LoadLibraryEx(strFullPath, NULL, 0);
+	}
+
+	return NULL;
+}
+
+HMODULE LoadLocalizedResourceDLL(const CString &strDLLName)
+{
+	TCHAR szModulePath[_MAX_PATH + 1];
+	GetModuleFileName(GetModuleHandle(NULL), szModulePath, _MAX_PATH);
+
+	// find path of current executable
+	CString strModule = szModulePath;
+	CString strPath = strModule.Left(strModule.ReverseFind(_T('\\')));
+
+	return LoadLocalizedResourceDLLUsingPath(strPath, strDLLName);
+}
+
+const TCHAR *szLocalizedUIDll = _T("GuidGenUI.dll");
+
 /////////////////////////////////////////////////////////////////////////////
 // CGuidGenApp
 
@@ -59,6 +130,10 @@ BOOL CGuidGenApp::InitInstance()
 		return FALSE;
 	}
 
+	// Load the localized resource DLL for current locale
+	HINSTANCE hInstRes = LoadLocalizedResourceDLL(szLocalizedUIDll);
+	AfxSetResourceHandle(hInstRes);
+
 	// process command line arguments
 	CWnd* pParentWnd = NULL;
 	for (LPCTSTR lpsz = m_lpCmdLine; *lpsz != 0; ++lpsz)
@@ -79,17 +154,8 @@ BOOL CGuidGenApp::InitInstance()
 
 	CGuidGenDlg dlg(pParentWnd);
 	m_pMainWnd = &dlg;
-	int nResponse = (int)dlg.DoModal();
-	if (nResponse == IDOK)
-	{
-		// TODO: Place code here to handle when the dialog is
-		//  dismissed with OK
-	}
-	else if (nResponse == IDCANCEL)
-	{
-		// TODO: Place code here to handle when the dialog is
-		//  dismissed with Cancel
-	}
+	// ignore return value
+	dlg.DoModal();
 
 	// Since the dialog has been closed, return FALSE so that we exit the
 	//  application, rather than start the application's message pump.

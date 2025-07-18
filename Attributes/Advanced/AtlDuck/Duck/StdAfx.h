@@ -20,16 +20,11 @@
 #define _ATL_DEBUG_REFCOUNT
 #endif
 
-#if _MSC_VER >= 1000
 #pragma once
-#endif // _MSC_VER >= 1000
 
 #define STRICT
 
-
-#define _WIN32_WINNT 0x0400
 #define _ATL_APARTMENT_THREADED
-
 
 #include <atlbase.h>
 

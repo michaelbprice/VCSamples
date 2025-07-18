@@ -21,7 +21,7 @@
 		helpstring("IATLAsync Interface"),
 		pointer_default(unique)
 	]
-	interface IATLAsync : IDispatch
+	interface IATLAsync : IUnknown
 	{
 		import "oaidl.idl";
 		import "ocidl.idl";
@@ -40,8 +40,6 @@
 library ASYNCLib
 {
 	importlib("stdole32.tlb");
-	
-
 	[
 		uuid(012F24D4-35B0-11D0-BF2D-0000E8D0D146),
 		helpstring("ATLAsync Class")

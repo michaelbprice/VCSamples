@@ -447,7 +447,7 @@ void CPolyTool::OnLButtonDblClk(CDrawView* pView, UINT , const CPoint& )
 		m_pDrawObj->m_points[nPoints - 1].y == m_pDrawObj->m_points[nPoints - 2].y))
 
 	{
-		// Nuke the last point if it's the same as the next to last...
+		// Remove the last point if it's the same as the next to last...
 		m_pDrawObj->m_nPoints -= 1;
 		pView->InvalObj(m_pDrawObj);
 	}

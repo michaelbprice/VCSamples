@@ -11,7 +11,6 @@
 // See these sources for detailed information regarding the
 // Active Template Library product.
 
-#define _WIN32_DCOM
 #include <atlbase.h>
 
 // You may derive a class from CComModule and use it if you want

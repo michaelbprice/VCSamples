@@ -60,7 +60,7 @@ BEGIN
     ICON            10,IDC_STATIC,10,10,20,20
     LTEXT           "Localize Control (in German), Version 1.0",IDC_STATIC,
                     40,10,170,8
-    LTEXT           L"\251 2005 Microsoft Corporation.  All rights reserved.",IDC_STATIC,40,
+    LTEXT           L"\251 2005 - 2008 Microsoft Corporation.  All rights reserved.",IDC_STATIC,40,
                     25,170,8
     DEFPUSHBUTTON   "OK (in German)",IDOK,220,10,59,14,WS_GROUP
 END

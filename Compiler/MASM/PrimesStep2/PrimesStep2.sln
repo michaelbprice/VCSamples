@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrimesStep2", "PrimesStep2.vcproj", "{628AF200-BE23-46AB-AA1C-716AF41D3719}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrimesStep2", "PrimesStep2.vcxproj", "{628AF200-BE23-46AB-AA1C-716AF41D3719}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Debug|Itanium.Build.0 = Debug|Itanium
 		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Debug|Win32.ActiveCfg = Debug|Win32
 		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Debug|Win32.Build.0 = Debug|Win32
-		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Debug|x64.ActiveCfg = Debug|x64
-		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Debug|x64.Build.0 = Debug|x64
+		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Debug|x64.ActiveCfg = Debug|X64
+		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Debug|x64.Build.0 = Debug|X64
 		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|Itanium.ActiveCfg = Release|Itanium
 		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|Itanium.Build.0 = Release|Itanium
 		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|Win32.ActiveCfg = Release|Win32
 		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|Win32.Build.0 = Release|Win32
-		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|x64.ActiveCfg = Release|x64
-		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|x64.Build.0 = Release|x64
+		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|x64.ActiveCfg = Release|X64
+		{628AF200-BE23-46AB-AA1C-716AF41D3719}.Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,23 +15,6 @@
 #define VC_EXTRALEAN		// Exclude rarely-used stuff from Windows headers
 #endif
 
-// Modify the following defines if you have to target a platform prior to the ones specified below.
-#ifndef WINVER				// Allow use of features specific to Win 2K or later
-#define WINVER 0x0500
-#endif
-
-#ifndef _WIN32_WINNT		// Allow use of features specific to Win 2K or later
-#define _WIN32_WINNT 0x0500
-#endif
-
-#ifndef _WIN32_WINDOWS		// Allow use of features specific to Win 98 or later
-#define _WIN32_WINDOWS 0x0410
-#endif
-
-#ifndef _WIN32_IE			// Allow use of features specific to IE 5.01 or later
-#define _WIN32_IE 0x0501
-#endif
-
 #include <afxwin.h>         // MFC core and standard components
 #include <afxext.h>         // MFC extensions
 #include <atlcoll.h>
@@ -50,4 +33,11 @@
 #include <afxtempl.h>
 #include <tlhelp32.h>
 #include <atldebugapi.h>
-//#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\"")
+
+#ifdef _UNICODE
+#if defined(_M_AMD64)
+#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='amd64' publicKeyToken='6595b64144ccf1df' language='*'\"")
+#else
+#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\"")
+#endif
+#endif

@@ -85,9 +85,6 @@ public:
 };
 
 extern COle2ViewApp theApp ;
-#if _MFC_VER >= 0x0300
-extern OSVERSIONINFO  g_osvi ;
-#endif
 
 
 #endif // _Ole2View_H_

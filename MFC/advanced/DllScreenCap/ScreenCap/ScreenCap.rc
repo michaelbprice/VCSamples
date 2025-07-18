@@ -157,7 +157,7 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
     LTEXT           "ScreenCap Version 1.0",IDC_STATIC,41,10,119,8,
                     SS_NOPREFIX
-    LTEXT           L"\251 2005 Microsoft Corporation.  All rights reserved.",IDC_STATIC,41,19,119,8
+    LTEXT           L"\251 2005 - 2008 Microsoft Corporation.  All rights reserved.",IDC_STATIC,41,19,119,8
     DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
     LTEXT           "Author: Joe Rohde, Microsoft Corporation",IDC_STATIC,41,
                     30,166,8

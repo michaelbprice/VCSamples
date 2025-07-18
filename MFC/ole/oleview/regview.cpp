@@ -152,23 +152,10 @@ void CRegistryView::OnInitialUpdate()
 	m_tree.GetWindowRect( &rc ) ;
 	ScreenToClient( &rc ) ;
 
-	if (g_osvi.dwMajorVersion < 4)
-	{
-		m_tree.SetFont( theApp.m_pFont ) ;
-		m_Name.SetFont( theApp.m_pFont ) ;
-		m_CLSID.SetFont( theApp.m_pFont ) ;
-//        m_btnUnReg.SetFont( theApp.m_pFont ) ;
+	m_tree.SetWindowPos( NULL, 4, rc.top, rcClient.Width() - 8,
+						 rcClient.Height() - rc.top - 4,
+						 SWP_NOACTIVATE|SWP_NOREDRAW|SWP_NOZORDER ) ;
 
-		m_tree.SetWindowPos( NULL, 4, rc.top, rcClient.Width() - 10,
-							 rcClient.Height() - rc.top - 6,
-							 SWP_NOACTIVATE|SWP_NOREDRAW|SWP_NOZORDER ) ;
-	}
-	else
-	{
-		m_tree.SetWindowPos( NULL, 4, rc.top, rcClient.Width() - 8,
-							 rcClient.Height() - rc.top - 4,
-							 SWP_NOACTIVATE|SWP_NOREDRAW|SWP_NOZORDER ) ;
-	}
 	m_tree.SetFocus() ;
 
 	m_tree.SetIndent( 0 ) ;

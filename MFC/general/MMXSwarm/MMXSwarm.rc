@@ -187,7 +187,7 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,10,11,21,20,SS_REALSIZEIMAGE
     LTEXT           "MMXSwarm Version 1.0",IDC_STATIC,56,10,112,8,
                     SS_NOPREFIX
-    LTEXT           "© 1998 - 2001 Microsoft Corporation.  All rights reserved.",
+    LTEXT           "© 1998 - 2008 Microsoft Corporation.  All rights reserved.",
                     IDC_STATIC,56,23,119,18
     DEFPUSHBUTTON   "OK",IDOK,183,7,50,14,WS_GROUP
     LTEXT           "Author: Joe Rohde, Microsoft Corporation",IDC_STATIC,56,

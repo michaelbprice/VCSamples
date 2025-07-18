@@ -98,7 +98,7 @@ BEGIN_MESSAGE_MAP(CGuidGenDlg, CDialog)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_NEWGUID, OnNewguid)
 	//}}AFX_MSG_MAP
-	ON_CONTROL_RANGE(BN_CLICKED, IDC_RADIO1, IDC_RADIO4, OnChangedSel)
+	ON_CONTROL_RANGE(BN_CLICKED, IDC_RADIO1, IDC_RADIO6, OnChangedSel)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -200,7 +200,7 @@ void CGuidGenDlg::OnChangedSel(UINT /*nID*/)
 {
 	// update m_nGuidType
 	UpdateData(TRUE);
-	ASSERT(m_nGuidType >= 0 && m_nGuidType <= 3);
+	ASSERT(m_nGuidType >= 0 && m_nGuidType <= 5);
 
 	// update the result text
 	CString strResult;

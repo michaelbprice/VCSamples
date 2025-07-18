@@ -35,7 +35,7 @@ extern enum LANGFLAG
 } LangFlag;  
 
 // Flag for effective options in conversion mode 
-BOOL fConvMode[5][13] = {	
+const BOOL fConvMode[5][13] = {
 	{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 
 	{1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 
 	{1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1}, 
@@ -43,7 +43,7 @@ BOOL fConvMode[5][13] = {
 	{1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0}};
 
 // Flag for effective options in sentence mode 
-BOOL fSentMode[5][6] = {	
+const BOOL fSentMode[5][6] = {
 	{0, 0, 0, 0, 0, 0}, 
 	{0, 1, 0, 0, 0, 0}, 
 	{1, 1, 1, 1, 1, 1}, 
@@ -51,7 +51,7 @@ BOOL fSentMode[5][6] = {
 	{0, 0, 0, 0, 0, 0}};
 
 // Conversion mode message 
-DWORD dwConvModeMsg[13] = {
+const DWORD dwConvModeMsg[13] = {
 	IME_CMODE_ALPHANUMERIC,		IME_CMODE_NATIVE,		IME_CMODE_KATAKANA, 
 	IME_CMODE_LANGUAGE,			IME_CMODE_FULLSHAPE,	IME_CMODE_ROMAN, 
 	IME_CMODE_CHARCODE,			IME_CMODE_HANJACONVERT, IME_CMODE_SOFTKBD, 
@@ -59,11 +59,14 @@ DWORD dwConvModeMsg[13] = {
 	IME_CMODE_FIXED};
 
 // Sentence mode message 
-DWORD dwSentModeMsg[6] = {
+const DWORD dwSentModeMsg[6] = {
 	IME_SMODE_NONE,			IME_SMODE_PLAURALCLAUSE,	IME_SMODE_SINGLECONVERT,	
 	IME_SMODE_AUTOMATIC,	IME_SMODE_PHRASEPREDICT,	IME_SMODE_CONVERSATION };
 
-extern TCHAR szEnglishFontName[5][11];
+const TCHAR szEnglishFontName[5][11] = {
+	_T("Tahoma"),		_T("MingLiU"),		_T("MS PGothic"), 
+	_T("Gulim"),		_T("NSimSun")};
+
 
 /////////////////////////////////////////////////////////////////////////////
 // CAboutDlg dialog used for App About
@@ -651,7 +654,3 @@ void CIMEDlg::OnOk()
 {
 	PostQuitMessage(0);	
 }
-
-
-
-

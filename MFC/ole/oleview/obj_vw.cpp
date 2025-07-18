@@ -793,10 +793,7 @@ lblInsertInList:
 								if (p) *p = '\0' ;
 							}
 							nBitmapId = _ttoi(pszBitmapId);
-							if (g_osvi.dwPlatformId == VER_PLATFORM_WIN32_WINDOWS)
-								hinstBitmap = LoadLibrary(pszBitmapModule);
-							else
-								hinstBitmap = LoadLibraryEx(pszBitmapModule, NULL, LOAD_LIBRARY_AS_DATAFILE);
+							hinstBitmap = LoadLibraryEx(pszBitmapModule, NULL, LOAD_LIBRARY_AS_DATAFILE);
 							if (hinstBitmap && (nBitmapId > 0))
 							{
 								HBITMAP hbmGlyph = ::LoadBitmap(hinstBitmap, MAKEINTRESOURCE(nBitmapId));

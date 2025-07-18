@@ -32,7 +32,7 @@ enum LANGFLAG
 } LangFlag;  
 
 // Define code pages 
-int nCodePage[5] = {
+const int nCodePage[5] = {
 	0,		// DEFAULT 
 	950,		// TRADITIONAL CHINESE
 	932,		// JAPANESE
@@ -41,7 +41,7 @@ int nCodePage[5] = {
 };
 
 // Define charset
-BYTE nCharSet[5] = {
+const BYTE nCharSet[5] = {
 	DEFAULT_CHARSET,		// Default 
 	CHINESEBIG5_CHARSET,	// TRADITIONAL CHINESE
 	SHIFTJIS_CHARSET,		// JAPANESE
@@ -50,7 +50,7 @@ BYTE nCharSet[5] = {
 };
 
 // Define Default font
-char szDefaultFontName[5][19] = {
+const char szDefaultFontName[5][19] = {
 	"\x54\x00\x61\x00\x68\x00\x6F\x00\x6D\x00\x61\x00\x00\x00",					// Default font
 	"\xB0\x65\x30\x7D\x0E\x66\xD4\x9A\x00\x00",									// TRADITIONAL_CHINESE font
 	"\x2D\xFF\x33\xFF\x20\x00\x30\xFF\xB4\x30\xB7\x30\xC3\x30\xAF\x30\x00\x00",	// JAPANESE font
@@ -58,7 +58,7 @@ char szDefaultFontName[5][19] = {
 	"\xB0\x65\x8B\x5B\x53\x4F\x00\x00"											// SIMPLIFIED_CHINESE font
 };
 
-TCHAR szEnglishFontName[5][11] = {
+const TCHAR szEnglishFontName[5][11] = {
 	_T("Tahoma"),		_T("MingLiU"),		_T("MS PGothic"), 
 	_T("Gulim"),		_T("NSimSun")};
 
@@ -81,29 +81,8 @@ CIMEEdit::CIMEEdit()
 	m_nComSize = 0;					// Clear variable for composition string size in Byte
 	m_nCharSet =  DEFAULT_CHARSET;		
 	m_hFont = NULL;		
-	m_fIsNT = FALSE;
-	m_fIsXP = FALSE;
-
-	// Check System version 
-	ZeroMemory( &osVI, sizeof( OSVERSIONINFO ) );	// Initialize the OSVERSIONINFO structure.
-	osVI.dwOSVersionInfoSize = sizeof( OSVERSIONINFO );    
-
-	if (GetVersionEx( &osVI ))		// Get OS version Information
-	{
-		if( osVI.dwPlatformId == VER_PLATFORM_WIN32_NT )
-		{
-			m_fIsNT = TRUE;
-	
-			// Check the minor version.
-			if(osVI.dwMinorVersion) 
-				m_fIsXP = TRUE;		// Windows XP or higher version
-		}
-	}
-	else	// if GetVersionEx function failed, try again with other function
-	{
-		if (GetVersion() < 0x80000000)
-			m_fIsNT = TRUE;
-	}
+	m_fIsNT = TRUE;
+	m_fIsXP = TRUE;
 }
 
 CIMEEdit::~CIMEEdit()

@@ -350,7 +350,7 @@ FONT 8, "Helv", 0, 0, 0x0
 BEGIN
     CONTROL         "",IDC_BIGICON,"Button",BS_OWNERDRAW | WS_DISABLED,6,6,
                     38,40
-    LTEXT           "SuperPad Version 9.0",IDC_STATIC,60,6,112,8,NOT 
+    LTEXT           "SuperPad Version 10.0",IDC_STATIC,60,6,112,8,NOT 
                     WS_GROUP
     LTEXT           "Microsoft Foundation Classes Application",IDC_STATIC,60,
                     15,145,8,NOT WS_GROUP
@@ -375,7 +375,7 @@ BEGIN
     CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,60,30,188,1
     LTEXT           "Warning: This computer program is protected by",
                     IDC_STATIC,60,36,188,8
-    LTEXT           "© 1998 - 2001 Microsoft Corporation.  All rights reserved.",
+    LTEXT           "© 1998 - 2008 Microsoft Corporation.  All rights reserved.",
                     IDC_STATIC,60,44,188,8
     LTEXT           "reproduction or distribution of this program, or any",
                     IDC_STATIC,60,52,188,8

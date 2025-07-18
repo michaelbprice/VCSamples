@@ -17,7 +17,6 @@
 import "oaidl.idl";
 import "ocidl.idl";
 
-	
 
 	[
 		object,
@@ -26,7 +25,7 @@ import "ocidl.idl";
 		helpstring("IFireTabCtrl Interface"),
 		pointer_default(unique)
 	]
-	interface IFireTabCtrl : IDispatch
+	interface IFireTabCtrl : IUnknown
 	{
 		[propget, id(1), helpstring("property Decay")] HRESULT Decay([out, retval] long *pVal);
 		[propput, id(1), helpstring("property Decay")] HRESULT Decay([in] long newVal);
