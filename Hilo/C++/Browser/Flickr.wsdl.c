@@ -350,8 +350,8 @@ const static _Flickr_wsdlLocalDefinitions Flickr_wsdlLocalDefinitions =
         },  // end of xmlStrings
         
         {  // Flickr_wsdldictionary
-          // 0c72367c-2d68-4e50-8990-40213a54ff14 
-        { 0x0c72367c, 0x2d68, 0x4e50, { 0x89, 0x90, 0x40,0x21, 0x3a, 0x54, 0xff, 0x14 } },
+          // c9d87b06-91ce-439a-9980-2a90ff430fbf 
+        { 0xc9d87b06, 0x91ce, 0x439a, { 0x99, 0x80, 0x2a,0x90, 0xff, 0x43, 0x0f, 0xbf } },
         (WS_XML_STRING*)&Flickr_wsdlLocalDefinitions.dictionary.xmlStrings,
         10,
         TRUE,
