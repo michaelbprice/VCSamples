@@ -68,7 +68,7 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,87,65,50,14
     ICON            IDR_MAIN,IDR_MAIN,17,20,20,20
     LTEXT           "Dialog with Control Bars Sample",IDC_STATIC,53,13,101,8
-    LTEXT           "Version 9.0 © 1992 - 2006, Microsoft Corp.",IDC_STATIC,
+    LTEXT           "Version 10.0 © 1992 - 2010, Microsoft Corp.",IDC_STATIC,
                     53,26,147,8
     LTEXT           "Created by Mary Kirtland, Mike Hedley, and Sridhar Madhugiri",
                     IDC_STATIC,53,40,101,17

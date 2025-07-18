@@ -14,14 +14,10 @@
 #if !defined(AFX_STDAFX_H__479B29E5_9A2C_11D0_B696_00A0C903487A__INCLUDED_)
 #define AFX_STDAFX_H__479B29E5_9A2C_11D0_B696_00A0C903487A__INCLUDED_
 
-#if _MSC_VER >= 1000
 #pragma once
-#endif // _MSC_VER >= 1000
 
 #define STRICT
 
-
-#define _WIN32_WINNT 0x0400
 #define _ATL_APARTMENT_THREADED
 
 #pragma warning(disable : 4355)

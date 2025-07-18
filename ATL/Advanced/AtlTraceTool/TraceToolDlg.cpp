@@ -465,7 +465,7 @@ static void GetProcessIds( CArray< DWORD >& aid )
 		UINT nChars=GetSystemDirectory(infoBuf, _countof(infoBuf));
 		ATLENSURE(nChars<_countof(infoBuf));
 		infoBuf[_countof(infoBuf)-1]=_T('\0');
-		strcat_s(infoBuf, sizeof(infoBuf) / sizeof(TCHAR), _T("\\PSAPI.DLL"));
+		_tcscat_s(infoBuf, sizeof(infoBuf) / sizeof(TCHAR), _T("\\PSAPI.DLL"));
 		hInst = LoadLibrary(infoBuf);
 		if( hInst != NULL )
 		{

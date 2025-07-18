@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "beeper", "beeper.vcproj", "{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "beeper", "beeper.vcxproj", "{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,32 +37,32 @@ Global
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Debug|Itanium.Build.0 = Debug|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Debug|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Debug|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Debug|x64.ActiveCfg = Debug|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Debug|x64.Build.0 = Debug|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Debug|x64.ActiveCfg = Debug|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Debug|x64.Build.0 = Debug|X64
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|Itanium.ActiveCfg = Debug|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|Itanium.Build.0 = Debug|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|x64.ActiveCfg = Debug|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|x64.Build.0 = Debug|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|x64.ActiveCfg = Debug|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Debug|x64.Build.0 = Debug|X64
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|Itanium.ActiveCfg = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|Itanium.Build.0 = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|x64.ActiveCfg = Release|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|x64.Build.0 = Release|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|x64.ActiveCfg = Release|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Release|x64.Build.0 = Release|X64
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|Itanium.ActiveCfg = Debug|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|Itanium.Build.0 = Debug|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|x64.ActiveCfg = Debug|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|x64.Build.0 = Debug|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|x64.ActiveCfg = Debug|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Debug|x64.Build.0 = Debug|X64
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|Itanium.ActiveCfg = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|Itanium.Build.0 = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|x64.ActiveCfg = Release|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|x64.Build.0 = Release|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|x64.ActiveCfg = Release|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.EXE Unicode Release|x64.Build.0 = Release|X64
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release MINCRT|Itanium.ActiveCfg = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release MINCRT|Itanium.Build.0 = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release MINCRT|Win32.ActiveCfg = Release|Win32
@@ -72,20 +72,20 @@ Global
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release|Itanium.Build.0 = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release|x64.ActiveCfg = Release|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release|x64.Build.0 = Release|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release|x64.ActiveCfg = Release|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Release|x64.Build.0 = Release|X64
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|Itanium.ActiveCfg = Debug|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|Itanium.Build.0 = Debug|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|x64.ActiveCfg = Debug|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|x64.Build.0 = Debug|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|x64.ActiveCfg = Debug|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Debug|x64.Build.0 = Debug|X64
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|Itanium.ActiveCfg = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|Itanium.Build.0 = Release|Itanium
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|Win32.ActiveCfg = Release|Win32
 		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|Win32.Build.0 = Release|Win32
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|x64.ActiveCfg = Release|x64
-		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|x64.Build.0 = Release|x64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|x64.ActiveCfg = Release|X64
+		{65F4AC91-6031-4DDE-94FE-B3A04DEEE2BB}.Unicode Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

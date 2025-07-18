@@ -9,21 +9,22 @@
 /////////////////////////////////////////////////////////////////////////////
 // Add manually edited resources here...
 
+#ifndef _AFX_INTL_RESOURCES
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
 //
+
 #define VER_FILETYPE	VFT_APP
-
 #define VER_FILEDESCRIPTION_STR "Microsoft \256 GUIDGEN Application"
-
 #define VER_INTERNALNAME_STR "GuidGen"
-
 #define VER_ORIGINALFILENAME_STR "GuidGen.EXE"
-
 #define VER_COPYRIGHTSTARTYEAR_STR	"1996"
 
 #include "ver_.rc"
+
+#endif // _AFX_INTL_RESOURCES
 
 
 /////////////////////////////////////////////////////////////////////////////

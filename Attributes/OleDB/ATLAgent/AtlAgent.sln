@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlAgent", "AtlAgent.vcproj", "{4006743B-9338-468D-86D9-493F4E5A8008}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlAgent", "AtlAgent.vcxproj", "{4006743B-9338-468D-86D9-493F4E5A8008}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		{4006743B-9338-468D-86D9-493F4E5A8008}.Debug|Itanium.Build.0 = Debug|Itanium
 		{4006743B-9338-468D-86D9-493F4E5A8008}.Debug|Win32.ActiveCfg = Debug|Win32
 		{4006743B-9338-468D-86D9-493F4E5A8008}.Debug|Win32.Build.0 = Debug|Win32
-		{4006743B-9338-468D-86D9-493F4E5A8008}.Debug|x64.ActiveCfg = Debug|x64
-		{4006743B-9338-468D-86D9-493F4E5A8008}.Debug|x64.Build.0 = Debug|x64
+		{4006743B-9338-468D-86D9-493F4E5A8008}.Debug|x64.ActiveCfg = Debug|X64
+		{4006743B-9338-468D-86D9-493F4E5A8008}.Debug|x64.Build.0 = Debug|X64
 		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|Itanium.ActiveCfg = Release|Itanium
 		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|Itanium.Build.0 = Release|Itanium
 		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|Win32.ActiveCfg = Release|Win32
 		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|Win32.Build.0 = Release|Win32
-		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|x64.ActiveCfg = Release|x64
-		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|x64.Build.0 = Release|x64
+		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|x64.ActiveCfg = Release|X64
+		{4006743B-9338-468D-86D9-493F4E5A8008}.Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

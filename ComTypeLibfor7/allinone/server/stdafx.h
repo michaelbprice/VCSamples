@@ -7,9 +7,7 @@
 
 #pragma warning(disable: 4786)
 
-#define _WIN32_WINNT 0x0500
 #define _ATL_APARTMENT_THREADED
-
 
 #include <afxwin.h>
 #include <afxdisp.h>

@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Async", "Async.vcproj", "{08BFE15F-B1BE-4049-80D1-EBA3B8D4290C}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Async", "Async.vcxproj", "{08BFE15F-B1BE-4049-80D1-EBA3B8D4290C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

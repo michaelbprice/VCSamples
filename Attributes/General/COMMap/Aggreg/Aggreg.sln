@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Aggreg", "Aggreg.vcproj", "{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Aggreg", "Aggreg.vcxproj", "{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,23 +22,23 @@ Global
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Debug|Itanium.Build.0 = Debug|Itanium
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Debug|Win32.ActiveCfg = Debug|Win32
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Debug|Win32.Build.0 = Debug|Win32
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Debug|x64.ActiveCfg = Debug|x64
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Debug|x64.Build.0 = Debug|x64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Debug|x64.ActiveCfg = Debug|X64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Debug|x64.Build.0 = Debug|X64
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Release|Itanium.ActiveCfg = Release|Itanium
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Release|Itanium.Build.0 = Release|Itanium
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Release|Win32.ActiveCfg = Debug|Win32
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Release|x64.ActiveCfg = Release|x64
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Release|x64.Build.0 = Release|x64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Release|x64.ActiveCfg = Release|X64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Release|x64.Build.0 = Release|X64
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Debug|Itanium.ActiveCfg = Debug|Itanium
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Debug|Itanium.Build.0 = Debug|Itanium
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Debug|Win32.ActiveCfg = Debug|Win32
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Debug|x64.ActiveCfg = Debug|x64
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Debug|x64.Build.0 = Debug|x64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Debug|x64.ActiveCfg = Debug|X64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Debug|x64.Build.0 = Debug|X64
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Release|Itanium.ActiveCfg = Release|Itanium
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Release|Itanium.Build.0 = Release|Itanium
 		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Release|Win32.ActiveCfg = Debug|Win32
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Release|x64.ActiveCfg = Release|x64
-		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Release|x64.Build.0 = Release|x64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Release|x64.ActiveCfg = Release|X64
+		{26D9F982-F5E0-47BE-8C3A-ACD6BEFBA5E8}.Unicode Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

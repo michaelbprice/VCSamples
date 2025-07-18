@@ -48,6 +48,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
+#ifndef _AFX_INTL_RESOURCES
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -57,6 +58,8 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\guidgen.ico"
+
+#endif // _AFX_INTL_RESOURCES
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -69,15 +72,15 @@ IDR_MAINFRAME           ICON                    "res\\guidgen.ico"
 
 #include <about_.rc>
 
-IDD_GUIDGEN_DIALOG DIALOG  0, 0, 246, 193
+IDD_GUIDGEN_DIALOG DIALOG  0, 0, 246, 221
 STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
     WS_SYSMENU
 CAPTION "Create GUID"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT           "Choose the desired format below, then select ""Copy"" to copy the results to the clipboard (the results can then be pasted into your source code).  Choose ""Exit"" when done.",
                     IDC_STATIC,6,6,178,37
-    GROUPBOX        " GUID Format ",IDC_STATIC,4,43,178,73
+    GROUPBOX        " GUID Format ",IDC_STATIC,4,43,178,101
     CONTROL         "&1. IMPLEMENT_OLECREATE(...)",IDC_RADIO1,"Button",
                     BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,9,57,167,10
     CONTROL         "&2. DEFINE_GUID(...)",IDC_RADIO2,"Button",
@@ -86,8 +89,12 @@ BEGIN
                     "Button",BS_AUTORADIOBUTTON,9,85,167,10
     CONTROL         "&4. Registry Format (ie. {xxxxxxx-xxxx ... xxxx })",
                     IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,9,99,167,10
-    GROUPBOX        " Result ",IDC_STATIC,4,121,238,59
-    LTEXT           "<<place-holder for resulting text>>",IDC_RESULTS,9,134,
+    CONTROL         "&5. [Guid(""xxxxxxx-xxxx ... xxxx"")]",
+                    IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,9,113,167,10
+    CONTROL         "&6. <Guid(""xxxxxxx-xxxx ... xxxx"")>",
+                    IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,9,127,167,10
+    GROUPBOX        " Result ",IDC_STATIC,4,149,238,59
+    LTEXT           "<<place-holder for resulting text>>",IDC_RESULTS,9,162,
                     229,41
     DEFPUSHBUTTON   "&Copy",IDOK,190,6,50,14
     PUSHBUTTON      "&New GUID",IDC_NEWGUID,190,23,50,14
@@ -103,10 +110,12 @@ STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "&About Create GUID..."
     IDP_ERR_INIT_OLE        "Unable to initialize OLE libraries!"
-    IDS_FORMATS             "// {%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nIMPLEMENT_OLECREATE(<<class>>, <<external_name>>, \r\n0x%lx, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x);\r\n"
-    IDS_STRING105           "// {%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nDEFINE_GUID(<<name>>, \r\n0x%lx, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x);\r\n"
-    IDS_STRING106           "// {%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nstatic const GUID <<name>> = \r\n{ 0x%lx, 0x%x, 0x%x, { 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x } };\r\n"
-    IDS_STRING107           "{%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}"
+    IDS_FORMATS             "// {%08lX-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nIMPLEMENT_OLECREATE(<<class>>, <<external_name>>, \r\n0x%lx, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x);\r\n"
+    IDS_STRING105           "// {%08lX-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nDEFINE_GUID(<<name>>, \r\n0x%lx, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x);\r\n"
+    IDS_STRING106           "// {%08lX-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nstatic const GUID <<name>> = \r\n{ 0x%lx, 0x%x, 0x%x, { 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x } };\r\n"
+    IDS_STRING107           "{%08lX-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}"
+    IDS_STRING108           "[Guid(""%08lX-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X"")]"
+    IDS_STRING109           "<Guid(""%08lX-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X"")>"
 END
 
 STRINGTABLE 

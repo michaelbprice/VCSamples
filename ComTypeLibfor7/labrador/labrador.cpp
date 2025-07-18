@@ -23,6 +23,11 @@ class CatlLabradorModule : public CAtlExeModuleT< CatlLabradorModule >
 public :
 	DECLARE_LIBID(LIBID_LABRADORLib)
 	DECLARE_REGISTRY_APPID_RESOURCEID(IDR_LABSVR, "{9D25D2CA-54B7-4319-B502-36C23819730B}")
+
+	HRESULT RegisterServer(BOOL, const CLSID* pCLSID = NULL) throw()
+	{
+		return CAtlExeModuleT::RegisterServer(FALSE, pCLSID);
+	}
 };
 
 CatlLabradorModule _AtlModule;

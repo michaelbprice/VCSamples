@@ -14,14 +14,10 @@
 #if !defined(AFX_STDAFX_H__120B7297_65BF_11D0_9DDC_00A0C9034892__INCLUDED_)
 #define AFX_STDAFX_H__120B7297_65BF_11D0_9DDC_00A0C9034892__INCLUDED_
 
-#if _MSC_VER >= 1000
 #pragma once
-#endif // _MSC_VER >= 1000
 
 #define STRICT
 
-
-#define _WIN32_WINNT 0x0400
 #define _ATL_APARTMENT_THREADED
 #pragma warning(disable:4100)
 #include <stdio.h>

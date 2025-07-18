@@ -81,7 +81,7 @@ FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,21,20
     LTEXT           "Pal Control, Version 1.0",IDC_STATIC,40,10,116,8
-    LTEXT           "© 1992 - 2001 Microsoft Corporation.  All rights reserved.",
+    LTEXT           "© 1992 - 2008 Microsoft Corporation.  All rights reserved.",
                     IDC_STATIC,40,25,125,20
     DEFPUSHBUTTON   "OK",IDOK,162,7,32,14,WS_GROUP
 END

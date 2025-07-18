@@ -16,12 +16,9 @@
 // CATLAsync
 class CATLAsync :
 	public CComObjectRootEx<CComSingleThreadModel>,
-	public CComCoClass<CATLAsync, &CLSID_CATLAsync>,
-	public IDispatchImpl<IATLAsync, &IID_IATLAsync, &LIBID_ASYNCLib, /*wMajor =*/ 1, /*wMinor =*/ 0>,
+	public CComCoClass<CATLAsync, &CLSID_CATLAsync>,	
 	public CComControl<CATLAsync>,
-	public IProvideClassInfoImpl<&CLSID_CATLAsync, &LIBID_ASYNCLib>,
-	public IPersistStreamInitImpl<CATLAsync>,
-	public IPersistStorageImpl<CATLAsync>,
+	public IProvideClassInfoImpl<&CLSID_CATLAsync, &LIBID_ASYNCLib>,	
 	public IQuickActivateImpl<CATLAsync>,
 	public IOleControlImpl<CATLAsync>,
 	public IOleObjectImpl<CATLAsync>,
@@ -31,7 +28,7 @@ class CATLAsync :
 	public IDataObjectImpl<CATLAsync>,
 	public IPersistPropertyBagImpl<CATLAsync>,
 	public IPerPropertyBrowsingImpl<CATLAsync>,
-	public IObjectSafetyImpl<CATLAsync, INTERFACESAFE_FOR_UNTRUSTED_CALLER>
+	public IATLAsync
 {
 public:
 	CContainedWindow m_EditCtrl;
@@ -45,31 +42,26 @@ DECLARE_REGISTRY_RESOURCEID(IDR_ATLAsync)
 
 
 BEGIN_COM_MAP(CATLAsync)
-	COM_INTERFACE_ENTRY(IATLAsync)
-	COM_INTERFACE_ENTRY(IDispatch)
-	COM_INTERFACE_ENTRY(IObjectSafety)
-	COM_INTERFACE_ENTRY_IMPL(IViewObjectEx)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IViewObject2, IViewObjectEx)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IViewObject, IViewObjectEx)
-	COM_INTERFACE_ENTRY_IMPL(IOleInPlaceObjectWindowless)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IOleInPlaceObject, IOleInPlaceObjectWindowless)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IOleWindow, IOleInPlaceObjectWindowless)
-	COM_INTERFACE_ENTRY_IMPL(IOleInPlaceActiveObject)
-	COM_INTERFACE_ENTRY_IMPL(IOleControl)
-	COM_INTERFACE_ENTRY_IMPL(IOleObject)
-	COM_INTERFACE_ENTRY_IMPL(IQuickActivate)
-	COM_INTERFACE_ENTRY_IMPL(IPersistStorage)
-	COM_INTERFACE_ENTRY_IMPL(IPersistStreamInit)
-	COM_INTERFACE_ENTRY_IMPL_IID(IID_IPersist, IPersistPropertyBag)
-	COM_INTERFACE_ENTRY_IMPL(IPersistPropertyBag)
-	COM_INTERFACE_ENTRY_IMPL(IDataObject)
+	COM_INTERFACE_ENTRY(IATLAsync)	
+	COM_INTERFACE_ENTRY(IViewObjectEx)
+	COM_INTERFACE_ENTRY2(IViewObject2, IViewObjectEx)
+	COM_INTERFACE_ENTRY2(IViewObject, IViewObjectEx)
+	COM_INTERFACE_ENTRY(IOleInPlaceObjectWindowless)
+	COM_INTERFACE_ENTRY2(IOleInPlaceObject, IOleInPlaceObjectWindowless)
+	COM_INTERFACE_ENTRY2(IOleWindow, IOleInPlaceObjectWindowless)
+	COM_INTERFACE_ENTRY(IOleInPlaceActiveObject)
+	COM_INTERFACE_ENTRY(IOleControl)
+	COM_INTERFACE_ENTRY(IOleObject)
+	COM_INTERFACE_ENTRY(IQuickActivate)
+	COM_INTERFACE_ENTRY2(IPersist, IPersistPropertyBag)
+	COM_INTERFACE_ENTRY(IPersistPropertyBag)
+	COM_INTERFACE_ENTRY(IDataObject)
 	COM_INTERFACE_ENTRY(IProvideClassInfo)
 END_COM_MAP()
 
 BEGIN_PROPERTY_MAP(CATLAsync)
 	PROP_ENTRY_TYPE("URL", 0, CLSID_NULL, VT_BSTR)
 END_PROPERTY_MAP()
-
 
 BEGIN_MSG_MAP(CATLAsync)
 	MESSAGE_HANDLER(WM_CREATE, OnCreate)
@@ -86,7 +78,8 @@ public:
 	}
 	LRESULT OnDoubleClick(UINT, WPARAM , LPARAM , BOOL& )
 	{
-		put_URL(CComBSTR(_T("http://www.microsoft.com")));
+		CComBSTR bstrURL = m_bstrURL.Length() == 0 ? _T("http://www.microsoft.com") : m_bstrURL;
+		put_URL(bstrURL);
 
 		return 0;
 	}
@@ -99,7 +92,7 @@ public:
 		rc.top = rc.left = 0;
 
 		m_EditCtrl.Create(m_hWnd, rc, NULL, WS_CHILD | WS_VISIBLE | ES_MULTILINE | ES_AUTOVSCROLL);
-		::SendMessage(m_EditCtrl.m_hWnd, WM_SETTEXT, 0,  (LPARAM)_T("Double click on this window or set the URL property to initiate download."));
+		::SendMessage(m_EditCtrl.m_hWnd, WM_SETTEXT, 0,  (LPARAM)_T("Double click on this window to initiate download."));
 		return 0;
 	}
 	STDMETHOD(SetObjectRects)(LPCRECT prcPos,LPCRECT prcClip)

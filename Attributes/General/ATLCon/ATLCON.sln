@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATLCon", "ATLCon.vcproj", "{E74CE007-90ED-4278-81D0-3381AD4D7860}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATLCon", "ATLCon.vcxproj", "{E74CE007-90ED-4278-81D0-3381AD4D7860}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Debug|Itanium.Build.0 = Debug|Itanium
 		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Debug|Win32.ActiveCfg = Debug|Win32
 		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Debug|Win32.Build.0 = Debug|Win32
-		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Debug|x64.ActiveCfg = Debug|x64
-		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Debug|x64.Build.0 = Debug|x64
+		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Debug|x64.ActiveCfg = Debug|X64
+		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Debug|x64.Build.0 = Debug|X64
 		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|Itanium.ActiveCfg = Release|Itanium
 		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|Itanium.Build.0 = Release|Itanium
 		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|Win32.ActiveCfg = Release|Win32
 		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|Win32.Build.0 = Release|Win32
-		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|x64.ActiveCfg = Release|x64
-		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|x64.Build.0 = Release|x64
+		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|x64.ActiveCfg = Release|X64
+		{E74CE007-90ED-4278-81D0-3381AD4D7860}.Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

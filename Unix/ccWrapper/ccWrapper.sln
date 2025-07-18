@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccWrapper", "ccWrapper.vcproj", "{B05E04B9-7DFC-4294-817B-5D4708EF7596}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccWrapper", "ccWrapper.vcxproj", "{B05E04B9-7DFC-4294-817B-5D4708EF7596}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Debug|Itanium.Build.0 = Debug|Itanium
 		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Debug|Win32.Build.0 = Debug|Win32
-		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Debug|x64.ActiveCfg = Debug|x64
-		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Debug|x64.Build.0 = Debug|x64
+		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Debug|x64.ActiveCfg = Debug|X64
+		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Debug|x64.Build.0 = Debug|X64
 		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|Itanium.ActiveCfg = Release|Itanium
 		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|Itanium.Build.0 = Release|Itanium
 		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|Win32.ActiveCfg = Release|Win32
 		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|Win32.Build.0 = Release|Win32
-		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|x64.ActiveCfg = Release|x64
-		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|x64.Build.0 = Release|x64
+		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|x64.ActiveCfg = Release|X64
+		{B05E04B9-7DFC-4294-817B-5D4708EF7596}.Release|x64.Build.0 = Release|X64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

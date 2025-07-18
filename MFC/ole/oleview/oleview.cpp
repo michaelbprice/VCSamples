@@ -51,9 +51,6 @@ COle2ViewApp::COle2ViewApp()
 // The one and only COle2ViewApp object
 
 COle2ViewApp theApp;
-#if _MFC_VER >= 0x0300
-OSVERSIONINFO  g_osvi ;
-#endif
 
 /////////////////////////////////////////////////////////////////////////////
 // COle2ViewApp initialization

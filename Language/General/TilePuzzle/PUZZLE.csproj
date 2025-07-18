@@ -1,7 +1,8 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>8.0.50608</ProductVersion>
+    <ProductVersion>10.0.20501</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -26,7 +27,8 @@
     <ProjectGuid>{DC207970-2224-4059-9B6B-73E0C318CDF4}</ProjectGuid>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -137,7 +139,7 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <ProjectReference Include="TileDriver\TileDriver.vcproj">
+    <ProjectReference Include="TileDriver\TileDriver.vcxproj">
       <Name>TileDriver</Name>
       <Project>{4FAD547A-1222-45AE-9F7C-7DB1B223AE55}</Project>
       <Package>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}</Package>

@@ -113,7 +113,7 @@ FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,21,20
     LTEXT           "Testhelp Control, Version 1.0",IDC_STATIC,43,10,131,8
-    LTEXT           "© 1992 - 2001 Microsoft Corporation.  All rights reserved.",
+    LTEXT           "© 1992 - 2008 Microsoft Corporation.  All rights reserved.",
                     IDC_STATIC,43,21,121,17
     DEFPUSHBUTTON   "OK",IDOK,172,7,32,14,WS_GROUP
     LTEXT           "Created by Mike Dice",IDC_STATIC,43,41,69,8

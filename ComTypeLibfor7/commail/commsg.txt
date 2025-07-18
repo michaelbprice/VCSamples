@@ -1,3 +1,0 @@
-Demo of VCCOM controller of MAPI for Exchange.
-
-

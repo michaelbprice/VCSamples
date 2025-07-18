@@ -4,7 +4,6 @@
 
 #define STRICT
 
-#define _WIN32_WINNT 0x0400
 #define _ATL_FREE_THREADED
 
 #include <atlbase.h>

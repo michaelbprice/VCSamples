@@ -23,7 +23,7 @@ CLabrador::CLabrador()
 	strcpy_s(m_szPetName, 32, "Fido");
 	strcpy_s(m_szSpeciesName, 32, "Warthog");
 	m_bIsAlive = TRUE;
-	m_bIsBarking = FALSE;
+	m_bIsBarking = TRUE;
 }
 
 /////////////////////////////////////////////////////////////////////////////

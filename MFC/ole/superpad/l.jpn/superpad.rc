@@ -361,7 +361,7 @@ BEGIN
 	CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,53,30,187,1
 	LTEXT           "Warning: This computer program is protected by",
 					IDC_STATIC,53,36,185,8
-	LTEXT           L"\251 2005 Microsoft Corporation.  All rights reserved.",
+	LTEXT           L"\251 2005 - 2008 Microsoft Corporation.  All rights reserved.",
 					IDC_STATIC,53,44,185,8
 	LTEXT           "reproduction or distribution of this program, or any",
 					IDC_STATIC,53,52,185,8

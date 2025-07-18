@@ -32,7 +32,7 @@ extern "C" int WINAPI _tWinMain(HINSTANCE hInstance,
 {
 	lpCmdLine = GetCommandLine();
 
-#if _WIN32_WINNT >= 0x0400 & defined(_ATL_FREE_THREADED)
+#if defined(_ATL_FREE_THREADED)
 	HRESULT hRes = CoInitializeEx(NULL, COINIT_MULTITHREADED);
 #else
 	HRESULT hRes = CoInitialize(NULL);
