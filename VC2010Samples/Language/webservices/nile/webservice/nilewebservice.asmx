@@ -1,1 +1,0 @@
-<%@ WebService Class="Nile.NileWebService" %>
